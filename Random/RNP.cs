@@ -130,16 +130,16 @@ Roll Person X (X=Modul 1,2,3) Y (Y=Hvor manage alternativer man ønsker skrivd u
         {
             var Deathrow = new List<Person>();
             var split = input.Substring(12).Split(" ");
-            int tall = Int32.Parse(split[1]);
-            int tall2 = Int32.Parse(split[0]);
+            int tall = Int32.Parse(split[0]);
+            int tall2 = Int32.Parse(split[1]);
             foreach (var t in People)
             {
-                if (t.Modul == tall2)
+                if (t.Modul == tall)
                 {
                     Deathrow.Add(t);
                 }
             }
-            while (Deathrow.Count > tall)
+            while (Deathrow.Count > tall2)
             {
                 var Alivepersone = Rnd.Next(Deathrow.Count);
                 Deathrow.RemoveAt(Alivepersone);
