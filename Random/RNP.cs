@@ -126,9 +126,9 @@ Roll Person X (X=Modul 1,2,3) Y (Y=Hvor manage alternativer man ønsker skrivd u
             }
             return tekst;
         }
-        // Roll person (tall.modul) (tall2.antall) hvodan den er splittet under.
         private static string RollPersonCommand(string input)
         {
+        // Roll person (tall.modul) (tall2.antall) hvodan den er splittet under.
             var Deathrow = new List<Person>();
             var split = input.Substring(12).Split(" ");
             int tall = Int32.Parse(split[0]);
